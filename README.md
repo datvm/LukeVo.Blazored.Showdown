@@ -1,4 +1,12 @@
-﻿# Installation
+﻿Quickly convert Markdown to HTML and vice versa in Blazor using Showdown.js.
+
+# Demo
+
+Demo: https://datvm.github.io/LukeVo.Blazored.Showdown/
+
+![Demo Screenshot](https://raw.githubusercontent.com/datvm/LukeVo.Blazored.Showdown/refs/heads/master/screenshot.jpg)
+
+# Installation
 
 Install the NuGet package via the .NET CLI:
 
