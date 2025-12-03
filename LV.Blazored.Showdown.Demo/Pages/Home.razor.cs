@@ -12,7 +12,6 @@ partial class Home
 
     protected override async Task OnInitializedAsync()
     {
-        await showdown.InitializeAsync();
         flavor = showdown.GetFlavor().ToString().ToLowerInvariant();
         ListSettings();
 
@@ -30,7 +29,7 @@ partial class Home
         RetrieveSetting();
     }
 
-    static readonly MethodInfo GetOptionMethod = typeof(ShowdownService).GetMethod(nameof(ShowdownService.GetOption))
+    static readonly MethodInfo GetOptionMethod = typeof(IShowdownServiceInProcess).GetMethod(nameof(IShowdownServiceInProcess.GetOption))
         ?? throw new InvalidOperationException("Could not find GetOption method.");
     void RetrieveSetting()
     {

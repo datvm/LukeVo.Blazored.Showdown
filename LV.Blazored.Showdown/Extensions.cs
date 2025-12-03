@@ -7,7 +7,8 @@ public static class DIExtensions
         Action<ShowdownOptions>? configure = null,
         Action<ShowdownConverterOptions>? configureConverterOptions = null)
     {
-        services.AddSingleton<ShowdownService>();
+        services.AddSingleton<IShowdownServiceInProcess, ShowdownService>();
+        services.AddSingleton<IShowdownService>(sp => sp.GetRequiredService<IShowdownServiceInProcess>());
 
         if (configure is not null)
         {

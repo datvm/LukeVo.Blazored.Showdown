@@ -1,5 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
-
+	
+	<PropertyGroup>
+		<!-- Nuget Metadata -->
+		<Version>1.0.0</Version>
+		<Authors>Luke Vo</Authors>
+		<Company>Luke Vo</Company>
+		<Title>Blazored ShowdownJS</Title>
+		<PackageTags>Blazor;ShowdownJS;Markdown;Showdown</PackageTags>
+		<Description>A Blazor wrapper for ShowdownJS, A bidirectional Markdown to HTML to Markdown converter</Description>
+		<PackageProjectUrl>https://github.com/datvm/LV.Blazored.Showdown</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/datvm/LV.Blazored.Showdown</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
@@ -8,12 +29,8 @@
 		<LangVersion>preview</LangVersion>
 	</PropertyGroup>
 
-
 	<ItemGroup>
 		<SupportedPlatform Include="browser" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.22" />
 
 		<Using Include="Microsoft.Extensions.DependencyInjection" />

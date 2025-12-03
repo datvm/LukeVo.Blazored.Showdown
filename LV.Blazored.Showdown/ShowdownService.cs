@@ -1,10 +1,10 @@
 ﻿namespace LV.Blazored.Showdown;
 
-public class ShowdownService(
+internal class ShowdownService(
     IJSRuntime js,
     IOptions<ShowdownOptions> opts,
     IOptions<ShowdownConverterOptions> converterOpts
-) : IAsyncDisposable
+) : IShowdownServiceInProcess
 {
     const string HelperPrefix = "globalThis.BlazoredShowdown.";
 
@@ -106,7 +106,7 @@ public class ShowdownService(
     public async Task<ShowdownFlavor> GetFlavorAsync()
     {
         ThrowIfNotInit();
-        var flavorStr =  await converter.InvokeAsync<string>("getFlavor");
+        var flavorStr = await converter.InvokeAsync<string>("getFlavor");
         return Enum.Parse<ShowdownFlavor>(flavorStr, true);
     }
 
