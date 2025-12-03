@@ -12,6 +12,7 @@
 		<RepositoryUrl>https://github.com/datvm/LukeVo.Blazored.Showdown</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 	
 	<ItemGroup>
