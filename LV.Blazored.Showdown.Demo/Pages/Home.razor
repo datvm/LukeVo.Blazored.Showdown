@@ -1,0 +1,73 @@
+﻿@page "/"
+
+@inject ShowdownService showdown;
+@inject HttpClient http;
+
+<div class="container-fluid full-size py-3 vstack gap-3">
+    <h1 class="mb-0">Blazored.Showdown Demo</h1>
+
+    <div class="row">
+        <div class="col">
+            <div class="form-floating">
+                <select id="cbo-flavor" class="form-select" @bind="flavor" @bind:after="SetFlavor">
+                    @foreach (var f in Enum.GetValues<ShowdownFlavor>())
+                    {
+                        <option value="@(f.ToString().ToLowerInvariant())">@(f)</option>
+                    }
+                </select>
+                <label for="cbo-flavor">Flavor</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="form-floating">
+                        <select id="cbo-setting" class="form-select" @bind="currSettingKey" @bind:after="RetrieveSetting">
+                            @foreach (var (k, v) in settingKeys)
+                            {
+                                <option value="@(k)">@(v.Name)</option>
+                            }
+                        </select>
+                        <label for="cbo-setting">Settings</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <input class="form-control" @bind="currSettingValue" />
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-primary" @onclick="SetSetting">Set</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col hstack">
+            <h3>Markdown</h3>
+            <div class="ms-auto">
+                <button class="btn btn-primary" @onclick="ToHtml">To HTML ➡️</button>
+            </div>
+        </div>
+        <div class="col hstack">
+            <div>
+                <button class="btn btn-primary" @onclick="ToMarkdown">⬅️ To Markdown</button>
+            </div>
+            <h3 class="ms-auto">HTML</h3>
+        </div>
+        <div class="col border-start">
+            <h3 class="text-center">Preview</h3>            
+        </div>
+    </div>
+
+    <div class="row row-stretch">
+        <div class="col">
+            <textarea @bind="markdown" class="form-control"></textarea>
+        </div>
+        <div class="col">
+            <textarea @bind="html" class="form-control"></textarea>
+        </div>
+        <div class="col mw-0 border-start">
+            @(new MarkupString(html))
+        </div>
+    </div>
+</div>
