@@ -15,7 +15,7 @@ partial class Home
         flavor = showdown.GetFlavor().ToString().ToLowerInvariant();
         ListSettings();
 
-        markdown = await http.GetStringAsync("/sample.MD");
+        markdown = await http.GetStringAsync("sample.MD");
         ToHtml();
     }
 
