@@ -8,8 +8,8 @@
 		<Title>Blazored ShowdownJS</Title>
 		<PackageTags>Blazor;ShowdownJS;Markdown;Showdown</PackageTags>
 		<Description>A Blazor wrapper for ShowdownJS, A bidirectional Markdown to HTML to Markdown converter</Description>
-		<PackageProjectUrl>https://github.com/datvm/LV.Blazored.Showdown</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/datvm/LV.Blazored.Showdown</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/datvm/LukeVo.Blazored.Showdown</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/datvm/LukeVo.Blazored.Showdown</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>

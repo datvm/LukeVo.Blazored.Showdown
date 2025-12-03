@@ -1,5 +1,5 @@
 ﻿
-namespace LV.Blazored.Showdown;
+namespace LukeVo.Blazored.Showdown;
 
 public interface IShowdownService : IAsyncDisposable
 {

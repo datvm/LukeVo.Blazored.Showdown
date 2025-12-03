@@ -12,12 +12,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\LV.Blazored.Showdown\LV.Blazored.Showdown.csproj" />
+		<ProjectReference Include="..\LukeVo.Blazored.Showdown\LukeVo.Blazored.Showdown.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Using Include="LV.Blazored.Showdown" />
-		<Using Include="LV.Blazored.Showdown.Demo" />
+		<Using Include="LukeVo.Blazored.Showdown" />
+		<Using Include="LukeVo.Blazored.Showdown.Demo" />
 		<Using Include="Microsoft.AspNetCore.Components.Web" />
 		<Using Include="Microsoft.AspNetCore.Components.WebAssembly.Hosting" />
 		<Using Include="System.Collections.Frozen" />

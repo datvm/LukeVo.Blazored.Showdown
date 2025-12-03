@@ -1,9 +1,0 @@
-<Solution>
-  <Folder Name="/Demo/">
-    <Project Path="LV.Blazored.Showdown.Demo/LV.Blazored.Showdown.Demo.csproj" />
-  </Folder>
-  <Folder Name="/_Files/">
-    <File Path="README.md" />
-  </Folder>
-  <Project Path="LV.Blazored.Showdown/LV.Blazored.Showdown.csproj" />
-</Solution>

@@ -1,4 +1,4 @@
-﻿namespace LV.Blazored.Showdown;
+﻿namespace LukeVo.Blazored.Showdown;
 
 internal class ShowdownService(
     IJSRuntime js,

@@ -1,4 +1,4 @@
-﻿namespace LV.Blazored.Showdown;
+﻿namespace LukeVo.Blazored.Showdown;
 
 public class ShowdownConverterOptions
 {

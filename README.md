@@ -3,7 +3,7 @@
 Install the NuGet package via the .NET CLI:
 
 ```bash
-dotnet add package LV.Blazored.Showdown
+dotnet add package LukeVo.Blazored.Showdown
 ```
 
 # Setup
@@ -42,4 +42,4 @@ await app.RunAsync();
 
 # Usage
 
-See [Demo Project](https://github.com/datvm/LV.Blazored.Showdown/tree/master/LV.Blazored.Showdown.Demo).
+See [Demo Project](https://github.com/datvm/LukeVo.Blazored.Showdown/tree/master/LukeVo.Blazored.Showdown.Demo).
